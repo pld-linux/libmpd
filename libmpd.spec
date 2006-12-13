@@ -43,8 +43,7 @@ Static MPD client library.
 %{__autoheader}
 %{__automake}
 
-%configure \
-	CPPFLAGS="-I/usr/include/ncurses"
+%configure
 %{__make}
 
 %install
