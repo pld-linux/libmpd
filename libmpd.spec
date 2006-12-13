@@ -4,7 +4,7 @@ Name:		libmpd
 Version:	0.12.0
 Release:	1
 License:	GPL
-Group:		Applications
+Group:		Libraries
 # http://sarine.nl/gmpc-downloads
 Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	bbfe28a5c3d7ef72b042030e3af52208
