@@ -1,5 +1,5 @@
-#
 Summary:	MPD client library
+Summary(pl):	Biblioteka kliencka MPD
 Name:		libmpd
 Version:	0.12.0
 Release:	1
@@ -17,21 +17,32 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Library for Music Player Daemon client development.
 
+%description -l pl
+Biblioteka do tworzenia klientów demona MPD (Music Player Daemon).
+
 %package devel
 Summary:	Header files for the MPD client library
+Summary(pl):	Pliki nag³ówkowe biblioteki klienckiej MPD
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for MPD client library.
 
+%description devel -l pl
+Pliki nag³ówkowe biblioteki klienckiej MPD.
+
 %package static
 Summary:	Static MPD client library
+Summary(pl):	Statyczna biblioteka kliencka MPD
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static MPD client library.
+
+%description static -l pl
+Statyczna biblioteka kliencka MPD.
 
 %prep
 %setup -q
@@ -64,10 +75,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
 %{_includedir}/*
 %{_pkgconfigdir}/*
-%{_libdir}/lib*.so
-%{_libdir}/lib*.la
 
 %files static
 %defattr(644,root,root,755)
