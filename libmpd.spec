@@ -1,5 +1,5 @@
 Summary:	MPD client library
-Summary(pl):	Biblioteka kliencka MPD
+Summary(pl.UTF-8):   Biblioteka kliencka MPD
 Name:		libmpd
 Version:	0.12.0
 Release:	1
@@ -17,31 +17,31 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Library for Music Player Daemon client development.
 
-%description -l pl
-Biblioteka do tworzenia klientÛw demona MPD (Music Player Daemon).
+%description -l pl.UTF-8
+Biblioteka do tworzenia klient√≥w demona MPD (Music Player Daemon).
 
 %package devel
 Summary:	Header files for the MPD client library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki klienckiej MPD
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki klienckiej MPD
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for MPD client library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki klienckiej MPD.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki klienckiej MPD.
 
 %package static
 Summary:	Static MPD client library
-Summary(pl):	Statyczna biblioteka kliencka MPD
+Summary(pl.UTF-8):   Statyczna biblioteka kliencka MPD
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static MPD client library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka kliencka MPD.
 
 %prep
