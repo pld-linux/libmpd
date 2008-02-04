@@ -1,12 +1,12 @@
 Summary:	MPD client library
 Summary(pl.UTF-8):	Biblioteka kliencka MPD
 Name:		libmpd
-Version:	0.14.0
+Version:	0.15.0
 Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://download.sarine.nl/gmpc-0.15.0/libmpd-0.14.0.tar.gz
-# Source0-md5:	44f9e0e3bcaf205b9a0d86cbcca03f9f
+Source0:	http://download.sarine.nl/gmpc-0.15.5/%{name}-%{version}.tar.gz
+# Source0-md5:	723f84bb2d42deee76d2ebea6db61656
 URL:		http://sarine.nl/gmpc
 BuildRequires:	autoconf
 BuildRequires:	automake
