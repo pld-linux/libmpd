@@ -10,6 +10,7 @@ Source0:	http://download.sarine.nl/gmpc-0.15.5/%{name}-%{version}.tar.gz
 URL:		http://sarine.nl/gmpc
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	glib2-devel >= 1:2.10
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
