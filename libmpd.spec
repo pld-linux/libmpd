@@ -3,15 +3,16 @@ Summary(pl.UTF-8):	Biblioteka kliencka MPD
 Name:		libmpd
 Version:	0.17.0
 Release:	1
-License:	GPL
+License:	GPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/musicpd/%{name}-%{version}.tar.gz
 # Source0-md5:	6690568e9f9d21d6b7556181ca7d9318
 URL:		http://sarine.nl/gmpc
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	glib2-devel >= 1:2.10
+BuildRequires:	glib2-devel >= 1:2.16.0
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,6 +26,7 @@ Summary:	Header files for the MPD client library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki klienckiej MPD
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	glib2-devel >= 1:2.16.0
 
 %description devel
 Header files for MPD client library.
@@ -53,7 +55,6 @@ Statyczna biblioteka kliencka MPD.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-
 %configure
 %{__make}
 
@@ -71,15 +72,16 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libmpd.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libmpd.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_includedir}/*
-%{_pkgconfigdir}/*
+%attr(755,root,root) %{_libdir}/libmpd.so
+%{_libdir}/libmpd.la
+%{_includedir}/libmpd-1.0
+%{_pkgconfigdir}/libmpd.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libmpd.a
