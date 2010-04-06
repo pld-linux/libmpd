@@ -7,6 +7,7 @@ License:	GPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/musicpd/%{name}-%{version}.tar.gz
 # Source0-md5:	56fd6037959ecc0c5663e4a45d3195bc
+Patch0:		%{name}-playlist.patch
 URL:		http://sarine.nl/gmpc
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -48,6 +49,7 @@ Statyczna biblioteka kliencka MPD.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
