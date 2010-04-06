@@ -1,12 +1,12 @@
 Summary:	MPD client library
 Summary(pl.UTF-8):	Biblioteka kliencka MPD
 Name:		libmpd
-Version:	0.19.0
+Version:	0.19.96
 Release:	1
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/musicpd/%{name}-%{version}.tar.gz
-# Source0-md5:	a994f5f25a22c778926a3684c3e3050d
+# Source0-md5:	56fd6037959ecc0c5663e4a45d3195bc
 URL:		http://sarine.nl/gmpc
 BuildRequires:	autoconf
 BuildRequires:	automake
