@@ -5,7 +5,7 @@ Version:	11.8.17
 Release:	1
 License:	GPL v2+
 Group:		Libraries
-Source0:	http://download.sarine.nl/Programs/gmpc/11.8/%{name}-%{version}.tar.gz
+Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	5ae3d87467d52aef3345407adb0a2488
 URL:		http://www.gmpclient.org/
 BuildRequires:	autoconf
