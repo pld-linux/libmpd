@@ -1,13 +1,13 @@
 Summary:	MPD client library
 Summary(pl.UTF-8):	Biblioteka kliencka MPD
 Name:		libmpd
-Version:	0.20.0
+Version:	11.8.17
 Release:	1
 License:	GPL v2+
 Group:		Libraries
-Source0:	http://downloads.sourceforge.net/musicpd/%{name}-%{version}.tar.gz
-# Source0-md5:	2f1c99e12c69f7d95cfd1e27368056ed
-URL:		http://sarine.nl/gmpc
+Source0:	http://download.sarine.nl/Programs/gmpc/11.8/%{name}-%{version}.tar.gz
+# Source0-md5:	5ae3d87467d52aef3345407adb0a2488
+URL:		http://www.gmpclient.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 1:2.16.0
@@ -73,7 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libmpd.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libmpd.so.?
+%attr(755,root,root) %ghost %{_libdir}/libmpd.so.1
 
 %files devel
 %defattr(644,root,root,755)
