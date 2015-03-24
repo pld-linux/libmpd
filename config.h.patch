@@ -1,0 +1,13 @@
+--- libmpd-11.8.17/src/libmpd.h~	2011-08-17 12:31:47.000000000 +0000
++++ libmpd-11.8.17/src/libmpd.h	2015-03-24 04:53:24.619240669 +0000
+@@ -37,6 +37,10 @@
+ #define __W32API_USE_DLLIMPORT__ 1
+ #endif
+ 
++#ifdef HAVE_CONFIG_H
++#include "config.h"
++#endif
++
+ #include "libmpdclient.h"
+ 
+ #ifndef TRUE

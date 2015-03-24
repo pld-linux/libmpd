@@ -2,11 +2,12 @@ Summary:	MPD client library
 Summary(pl.UTF-8):	Biblioteka kliencka MPD
 Name:		libmpd
 Version:	11.8.17
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	5ae3d87467d52aef3345407adb0a2488
+Patch0:		config.h.patch
 URL:		http://www.gmpclient.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -48,6 +49,7 @@ Statyczna biblioteka kliencka MPD.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
