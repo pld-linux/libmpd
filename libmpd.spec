@@ -2,7 +2,7 @@ Summary:	MPD client library
 Summary(pl.UTF-8):	Biblioteka kliencka MPD
 Name:		libmpd
 Version:	11.8.17
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.gz
