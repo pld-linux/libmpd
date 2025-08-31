@@ -2,18 +2,19 @@ Summary:	MPD client library
 Summary(pl.UTF-8):	Biblioteka kliencka MPD
 Name:		libmpd
 Version:	11.8.17
-Release:	3
+Release:	4
 License:	GPL v2+
 Group:		Libraries
-Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.gz
+Source0:	https://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	5ae3d87467d52aef3345407adb0a2488
 Patch0:		config.h.patch
-URL:		http://www.gmpclient.org/
-BuildRequires:	autoconf
+URL:		https://www.gmpclient.org/
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 1:2.16.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
+Requires:	glib2 >= 1:2.16.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -53,7 +54,7 @@ Statyczna biblioteka kliencka MPD.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
@@ -66,6 +67,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# obsoleted by pkg-config
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libmpd.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -74,13 +78,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc ChangeLog
 %attr(755,root,root) %{_libdir}/libmpd.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libmpd.so.1
+%ghost %{_libdir}/libmpd.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libmpd.so
-%{_libdir}/libmpd.la
+%{_libdir}/libmpd.so
 %{_includedir}/libmpd-1.0
 %{_pkgconfigdir}/libmpd.pc
 
