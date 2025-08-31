@@ -1,0 +1,11 @@
+--- libmpd-11.8.17/src/libmpd-playlist.c.orig	2011-08-17 14:31:47.000000000 +0200
++++ libmpd-11.8.17/src/libmpd-playlist.c	2025-08-31 21:04:01.038824385 +0200
+@@ -780,7 +780,7 @@ int mpd_playlist_load(MpdObj *mi, const
+ 	if(mpd_lock_conn(mi))
+ 	{
+ 		debug_printf(DEBUG_ERROR,"lock failed\n");
+-		return NULL;
++		return MPD_LOCK_FAILED;
+ 	}
+     mpd_sendLoadCommand(mi->connection,path);
+ 	mpd_finishCommand(mi->connection);

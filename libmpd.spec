@@ -8,6 +8,7 @@ Group:		Libraries
 Source0:	https://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	5ae3d87467d52aef3345407adb0a2488
 Patch0:		config.h.patch
+Patch1:		%{name}-types.patch
 URL:		https://www.gmpclient.org/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -51,6 +52,7 @@ Statyczna biblioteka kliencka MPD.
 %prep
 %setup -q
 %patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %{__libtoolize}
