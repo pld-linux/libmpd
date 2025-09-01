@@ -9,7 +9,7 @@ Source0:	https://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.
 # Source0-md5:	5ae3d87467d52aef3345407adb0a2488
 Patch0:		config.h.patch
 Patch1:		%{name}-types.patch
-URL:		https://www.gmpclient.org/
+URL:		https://gmpc.fandom.com/wiki/Libmpd
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 1:2.16.0
